@@ -1,3 +1,42 @@
 .container-fluid {
-  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 50px 0px 20px 30px;
+}
+
+.title {
+  font-size: 60px;
+}
+
+.form-label {
+  font-size: 30px;
+}
+
+#title {
+  height: 100px;
+  width: 800px;
+  border-radius: 20px;
+  border-color: black;
+}
+
+#content {
+  height: 300px;
+  width: 800px;
+  border-radius: 20px;
+  border-color: black;
+}
+
+.btn {
+  width: 20vh;
+  height: 5vh;
+  border-radius: 30px;
+  border-color: black;
+  background-color: #ffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #eee4e0;
 }
