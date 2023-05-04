@@ -15,6 +15,12 @@ class Post {
 
         return response.rows.map(p => new Post(p))
     }
+
+    static async create(data){
+        const {title, entry_date, content} = data
+        await db.query("INSERT INTO post (title, entry_date, content) VALUES ($1,$2,$3);",
+        [title,entry_date,content])
+    }
 }
 
 

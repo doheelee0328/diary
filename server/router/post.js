@@ -5,4 +5,5 @@ const postRouter = Router()
 
 
 postRouter.get("/",postContoller.index)
+postRouter.post("/",postContoller.create)
 module.exports = postRouter
