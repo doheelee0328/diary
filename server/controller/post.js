@@ -13,8 +13,8 @@ async function index (req,res){
 async function create (req,res){
     try {
         const data = req.body
-        const result = await Post.create(data)
-        res.status(201).send(result)
+        await Post.create(data)
+        res.status(201).send("Entry Added")
     } catch (error) {
         res.status(400).json({"error": error.message})
     }
