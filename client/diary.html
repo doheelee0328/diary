@@ -17,39 +17,44 @@
   <body>
     <div class="container-fluid">
       <form action="">
-        <h1 class="title">dear diary,</h1>
-        <div class="title-date-container">
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label title"
-              >Title:</label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="title"
-              aria-describedby="emailHelp"
-            />
-          </div>
-          <div class="date-picker">
-            <label for="exampleInputPassword1" class="form-label content"
-              >Date:</label
-            >
-            <input
-              type="date"
-              id="start"
-              name="trip-start"
-              value="2023-05-04"
-            />
-          </div>
+        <h1 class="title">Dear Diary</h1>
+
+        <div class="date-picker">
+          <label for="exampleInputPassword1" class="form-label content"
+            >Date:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="date"
+            aria-describedby="emailHelp"
+          />
         </div>
+        <label for="exampleInputEmail1" class="form-label title">Title:</label>
+        <input
+          type="email"
+          class="form-control"
+          id="title"
+          aria-describedby="emailHelp"
+        />
+
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label content"
             >Content:</label
           >
-          <input type="password " class="form-control content" id="content" />
+          <textarea
+            cols="80"
+            rows="10"
+            id="content"
+            class="form-control"
+            type="text"
+            name="textbox"
+          >
+          </textarea>
         </div>
-        <button type="submit" class="button">Submit</button>
+        <div class="btn-container">
+          <button type="submit" class="button">Submit</button>
+        </div>
       </form>
-    </div>
   </body>
 </html>
