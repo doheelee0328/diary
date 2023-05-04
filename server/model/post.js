@@ -21,6 +21,16 @@ class Post {
         await db.query("INSERT INTO post (title, entry_date, content) VALUES ($1,$2,$3);",
         [title,entry_date,content])
     }
+
+    static async getById(id){
+        const response = await db.query("SELECT * FROM post WHERE post_id = $1",[id])
+        if (response.rows.length != 1){
+            throw new Error("Diary entry does not exist")
+        }
+        return new Post(response.rows[0])
+        // return response
+    }
+
 }
 
 

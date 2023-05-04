@@ -20,9 +20,21 @@ async function create (req,res){
     }
 }
 
+async function getIndexID(req,res){
+    try {
+        const chosen_id = parseInt(req.params.id)
+        const entry = await Post.getById(chosen_id)
+        return res.json(entry)
+    } catch (error) {
+        res.status(400).json({"error": error.message})
+
+    }
+}
+
 
 
 module.exports = {
     index,
-    create
+    create,
+    getIndexID
 }
