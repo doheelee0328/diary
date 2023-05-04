@@ -8,7 +8,7 @@ class Post {
     }
 
     static async getAll(){
-        const response = await db.query("SELECT * FROM post")
+        const response = await db.query("SELECT * FROM post ORDER BY entry_date DESC")
         if (response.rows.length === 0){
             throw new Error ("No diary entries have been made")
         }
