@@ -76,4 +76,13 @@ form {
 .date-picker {
   display: flex;
   width: 50%;
+  gap: 10px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  gap: 20px;
 }
