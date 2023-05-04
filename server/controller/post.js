@@ -32,4 +32,5 @@ async function getIndexID(req, res) {
 module.exports = {
   index,
   create,
+  getIndexID,
 }
