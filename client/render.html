@@ -16,41 +16,35 @@
   </head>
   <body>
     <div class="container-fluid">
+      <h1 class="title">Your diary entries:</h1>
       <form action="">
-        <h1 class="title">Your diary entries:</h1>
-
         <div class="date-picker">
-          <label for="exampleInputPassword1" class="form-label content"
-            >Date:</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="date"
-            aria-describedby="emailHelp"
-          />
+          <label for="date" class="form-label date">Date:</label>
+          <div class="write-date"><div class="write-date"></div></div>
         </div>
-        <label for="exampleInputEmail1" class="form-label title">Title:</label>
-        <input
-          type="email"
-          class="form-control"
-          id="title"
-          aria-describedby="emailHelp"
-        />
+        <div class="title-container">
+          <label for="title" class="form-label form-title">Title:</label>
+          <p class="write-title"></p>
+        </div>
 
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label content"
-            >Content:</label
-          >
-          <textarea
-            cols="80"
-            rows="10"
-            id="content"
-            class="form-control"
-            type="text"
-            name="textbox"
-          >
-          </textarea>
+        <div class="content-container">
+          <div class="write-content"><p class="write-content"></p></div>
+        </div>
+        <div class="btn-container">
+          <button type="submit" class="button edit">Edit</button>
+          <button type="submit" class="button delete">Delete</button>
+        </div>
+      </form>
+      <form action="">
+        <div class="date-second">
+          <label for="date" class="form-label date">Date:</label>
+        </div>
+        <div class="title-second">
+          <label for="title" class="form-label form-title">Title:</label>
+          <p class="write-title"></p>
+        </div>
+        <div class="content-second">
+          <div class="write-content"><p class="write-content"></p></div>
         </div>
         <div class="btn-container">
           <button type="submit" class="button edit">Edit</button>

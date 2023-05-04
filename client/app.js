@@ -21,7 +21,9 @@ async function submitForm() {
   const result = await fetch('http://localhost:3000/entries', options)
   if (result === 201) {
     e.target.value.title = ''
-    e.target.value.start
+    e.target.start.value = ''
+    e.target.content.value = ''
+    window.assign.location('./render.html')
   }
 }
 
