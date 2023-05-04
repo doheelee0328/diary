@@ -11,4 +11,6 @@ CREATE TABLE post (
 INSERT INTO post
     (title,content)
 VALUES
-    ('Test', 'Welcome to your first diary entry')
+    ('Test', 'Welcome to your first diary entry'),
+    ('Test', 'Filler post 1'),
+    ('Test', 'Filler post 2');
