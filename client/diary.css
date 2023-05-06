@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: space-around;
   margin: 50px;
+  gap: 10px;
 }
 form {
   display: flex;
@@ -94,7 +95,4 @@ form {
   flex-direction: column;
   padding-left: 50px;
   gap: 10px;
-}
-p {
-  font-size: 40px;
 }

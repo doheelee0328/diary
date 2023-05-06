@@ -1,5 +1,6 @@
 @import url('./frontpage.css');
 @import url('./diary.css');
+@import url('./render.css');
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
 * {
   margin: 0;

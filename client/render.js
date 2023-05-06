@@ -22,10 +22,9 @@ function renderData1(data) {
 
   const displayDate = document.createElement('p')
   displayDate.textContent = date
-
   writeDate.appendChild(displayDate)
-  const displayTitle = document.createElement('p')
 
+  const displayTitle = document.createElement('p')
   displayTitle.textContent = title
   writeTitle.appendChild(displayTitle)
 

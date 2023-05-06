@@ -15,36 +15,42 @@
     <title>Post</title>
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">Home</a>
+      <a class="navbar-brand" href="#">Post an entry</a>
+    </nav>
     <div class="container-fluid">
       <h1 class="title">Your diary entries:</h1>
-      <form action="">
+      <form action="post">
         <div class="date-picker">
           <label for="date" class="form-label date">Date:</label>
-          <div class="write-date"><div class="write-date"></div></div>
+          <div class="write-date"></div>
         </div>
         <div class="title-container">
           <label for="title" class="form-label form-title">Title:</label>
-          <p class="write-title"></p>
+          <div class="write-title"></div>
         </div>
 
         <div class="content-container">
-          <div class="write-content"><p class="write-content"></p></div>
+          <div class="write-content"><div class="write-content"></div></div>
         </div>
         <div class="btn-container">
           <button type="submit" class="button edit">Edit</button>
           <button type="submit" class="button delete">Delete</button>
         </div>
       </form>
-      <form action="">
+      <form action="post" class="form2">
         <div class="date-second">
           <label for="date" class="form-label date">Date:</label>
+          <div class="write-date"></div>
         </div>
         <div class="title-second">
           <label for="title" class="form-label form-title">Title:</label>
-          <p class="write-title"></p>
+          <div class="write-title"></div>
         </div>
+
         <div class="content-second">
-          <div class="write-content"><p class="write-content"></p></div>
+          <div class="write-content"><div class="write-content"></div></div>
         </div>
         <div class="btn-container">
           <button type="submit" class="button edit">Edit</button>

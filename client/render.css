@@ -1,0 +1,31 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee4e0;
+}
+
+.navbar-brand {
+  box-sizing: border-box;
+  padding-left: 80px;
+  font-weight: 900;
+}
+
+p {
+  font-size: 30px;
+}
+
+.write-date {
+  padding-top: 10px;
+}
+
+.title-container,
+.date-second,
+.title-second {
+  display: flex;
+  gap: 5px;
+}
+
+.form2 {
+  padding-top: 40px;
+}
