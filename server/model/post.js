@@ -8,9 +8,7 @@ class Post {
   }
 
   static async getAll() {
-    const response = await db.query(
-      'SELECT * FROM post ORDER BY entry_date DESC'
-    )
+    const response = await db.query('SELECT * FROM post ORDER BY post_id')
     if (response.rows.length === 0) {
       throw new Error('No diary entries have been made')
     }
@@ -20,10 +18,11 @@ class Post {
 
   static async create(data) {
     const { title, entry_date, content } = data
-    await db.query(
-      'INSERT INTO post (title, entry_date, content) VALUES ($1,$2,$3);',
+    const postData = await db.query(
+      'INSERT INTO post (title, entry_date, content) VALUES ($1,$2,$3) RETURNING *;',
       [title, entry_date, content]
     )
+    return new Post(postData.rows[0])
   }
 
   static async getById(id) {
