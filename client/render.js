@@ -1,7 +1,7 @@
 const addPosts = document.getElementById('add-posts')
 
 async function fetchData() {
-  const response = await fetch('http://localhost:3000/entries')
+  const response = await fetch('https://diary-backend-app.onrender.com/entries')
   const data = await response.json()
 
   renderData(data)
