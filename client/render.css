@@ -1,0 +1,73 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee4e0;
+}
+
+.navbar-brand {
+  box-sizing: border-box;
+  padding-left: 80px;
+  font-weight: 900;
+}
+
+p {
+  font-size: 30px;
+}
+
+/* .write-date {
+  padding-top: 10px;
+} */
+
+.title-container,
+.date-second,
+.title-second {
+  display: flex;
+  gap: 5px;
+}
+
+.form2 {
+  padding-top: 40px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  gap: 20px;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+
+.button.edit {
+  width: 20vh;
+  height: 5vh;
+  border-radius: 20px;
+  background-color: #ffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.button.delete {
+  width: 20vh;
+  height: 5vh;
+  border-radius: 20px;
+  background-color: #ffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.button.edit:hover {
+  background-color: #b5d1ab;
+}
+
+.button.delete:hover {
+  background-color: #c67171;
+}
+
+#add-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 50px;
+}

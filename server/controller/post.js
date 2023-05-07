@@ -29,8 +29,20 @@ async function getIndexID(req, res) {
   }
 }
 
+async function destroy(req, res) {
+  try {
+    const chosen_id = parseInt(req.params.id)
+    const entry = await Post.getById(chosen_id)
+    await entry.destroy()
+    res.status(204).json()
+  } catch (error) {
+    res.status(400).json({ error: error.message })
+  }
+}
+
 module.exports = {
   index,
   create,
   getIndexID,
+  destroy,
 }

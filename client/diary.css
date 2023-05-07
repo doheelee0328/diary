@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: space-around;
   margin: 50px;
+  gap: 10px;
 }
 form {
   display: flex;
@@ -16,7 +17,8 @@ form {
 
 .title {
   font-size: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  padding-left: 50px;
 }
 
 .form-label {
@@ -65,24 +67,15 @@ form {
   box-shadow: none;
 }
 
-.button.edit:hover {
-  background-color: #b5d1ab;
-}
-
-.button.delete:hover {
-  background-color: #c67171;
-}
-
 .date-picker {
   display: flex;
   width: 50%;
   gap: 10px;
 }
 
-.btn-container {
+.form-post {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-  gap: 20px;
+  flex-direction: column;
+  padding-left: 50px;
+  gap: 10px;
 }

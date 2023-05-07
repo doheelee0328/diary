@@ -11,6 +11,6 @@ CREATE TABLE post (
 INSERT INTO post
     (title,entry_date,content)
 VALUES
-    ('Test', '1995-07-30','Welcome to your first diary entry'),
-    ('Test','2001-03-15', 'Filler post 1'),
-    ('Test', '2023-01-20','Filler post 2');
+    ('A Productive Day', '2023-05-04','Today was a great day. I woke up early and hit the gym for an hour-long workout, followed by a healthy breakfast. Then, I spent the morning tackling some work tasks and checking off a few items from my to-do list.'),
+    ('A Special Moment','2023-02-15', 'I spent the afternoon lounging in the sun and talking about our plans for the future. It was such a simple but meaningful gesture that made me feel so loved.' );
+
