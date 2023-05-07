@@ -8,7 +8,7 @@ class Post {
   }
 
   static async getAll() {
-    const response = await db.query('SELECT * FROM post ORDER BY post_id')
+    const response = await db.query('SELECT * FROM post ORDER BY post_id DESC')
     if (response.rows.length === 0) {
       throw new Error('No diary entries have been made')
     }
@@ -29,11 +29,22 @@ class Post {
     const response = await db.query('SELECT * FROM post WHERE post_id = $1', [
       id,
     ])
-    if (response.rows.length != 1) {
+    if (response.rows.length !== 1) {
       throw new Error('Diary entry does not exist')
     }
     return new Post(response.rows[0])
     // return response
+  }
+
+  async destroy() {
+    const response = await db.query(
+      'DELETE FROM post WHERE post_id = $1 RETURNING *;',
+      [this.id]
+    )
+    if (response.rows.length !== 1) {
+      throw new Error('Diary entry does not exist')
+    }
+    return new Post(response.rows[0])
   }
 }
 

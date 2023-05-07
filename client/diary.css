@@ -67,27 +67,10 @@ form {
   box-shadow: none;
 }
 
-.button.edit:hover {
-  background-color: #b5d1ab;
-}
-
-.button.delete:hover {
-  background-color: #c67171;
-}
-
 .date-picker {
   display: flex;
   width: 50%;
   gap: 10px;
-}
-
-.btn-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20%;
-  gap: 20px;
-  margin-bottom: 20px;
 }
 
 .form-post {

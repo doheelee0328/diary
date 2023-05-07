@@ -1,52 +1,45 @@
-const writeDate = document.querySelector('.date-picker')
-const writeTitle = document.querySelector('.title-container')
-const writeContent = document.querySelector('.content-container')
-
-const writeDate2 = document.querySelector('.date-second')
-const writeTitle2 = document.querySelector('.title-second')
-const writeContent2 = document.querySelector(' .content-second')
+const addPosts = document.getElementById('add-posts')
 
 async function fetchData() {
-  const response = await fetch('http://localhost:3000/entries') // render
+  const response = await fetch('http://localhost:3000/entries')
   const data = await response.json()
-  console.log(data)
 
-  renderData1(data)
-  renderData2(data)
+  renderData(data)
 }
 
-function renderData1(data) {
-  // first post
+function renderData(data) {
+  data.forEach((post) => {
+    const { date, title, content } = post
 
-  const { date, title, content } = data[0]
+    // create all the elements
+    const postInfo = document.createElement('div')
+    const postDate = document.createElement('p')
+    const postTitle = document.createElement('p')
+    const postContent = document.createElement('p')
+    const buttonContainer = document.createElement('div')
+    const editButton = document.createElement('button')
+    const deleteButton = document.createElement('button')
 
-  const displayDate = document.createElement('p')
-  displayDate.textContent = date
-  writeDate.appendChild(displayDate)
+    postDate.textContent = `Date: ${date}`
+    postTitle.textContent = `Title: ${title}`
+    postContent.textContent = content
 
-  const displayTitle = document.createElement('p')
-  displayTitle.textContent = title
-  writeTitle.appendChild(displayTitle)
+    editButton.classList.add('button', 'edit')
+    deleteButton.classList.add('button', 'delete')
 
-  const displayContent = document.createElement('p')
-  displayContent.textContent = content
-  writeContent.appendChild(displayContent)
+    editButton.textContent = 'Edit'
+    deleteButton.textContent = 'Delete'
+
+    postInfo.appendChild(postDate)
+    postInfo.appendChild(postTitle)
+    postInfo.appendChild(postContent)
+    buttonContainer.appendChild(editButton)
+    buttonContainer.appendChild(deleteButton)
+
+    addPosts.appendChild(postInfo)
+    addPosts.appendChild(buttonContainer)
+    buttonContainer.classList.add('btn-container')
+  })
 }
 
-// second post
-function renderData2(data) {
-  const { date, title, content } = data[1]
-
-  const displayDate2 = document.createElement('p')
-  displayDate2.textContent = date
-  writeDate2.appendChild(displayDate2)
-
-  const displayTitle2 = document.createElement('p')
-  displayTitle2.textContent = title
-  writeTitle2.appendChild(displayTitle2)
-
-  const displayContent2 = document.createElement('p')
-  displayContent2.textContent = content
-  writeContent2.appendChild(displayContent2)
-}
 fetchData()
