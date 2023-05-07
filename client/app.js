@@ -19,7 +19,10 @@ async function submitForm(event) {
     body: JSON.stringify(add),
   }
 
-  const result = await fetch('http://localhost:3000/entries', options)
+  const result = await fetch(
+    'https://diary-backend-app.onrender.com/entries',
+    options
+  )
   console.log(result)
   if (result.status === 201) {
     event.target.title.value = ''
@@ -28,7 +31,7 @@ async function submitForm(event) {
     window.location.assign('./render.html')
   }
 }
-
+console.log('hello world')
 // function renderEntry(data) {
 //   const heading = document.createElement('h2')
 //   heading.textContent =
