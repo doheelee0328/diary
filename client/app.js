@@ -31,8 +31,3 @@ async function submitForm(event) {
     window.location.assign('./render.html')
   }
 }
-
-// function renderEntry(data) {
-//   const heading = document.createElement('h2')
-//   heading.textContent =
-// }
