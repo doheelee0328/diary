@@ -29,6 +29,18 @@ async function getIndexID(req, res) {
   }
 }
 
+async function update(req, res) {
+  try {
+    const chosen_id = parseInt(req.params.id)
+    const data = req.body
+    const entry = await Post.getById(chosen_id)
+    const updateEntry = await entry.update(data)
+    res.status(200).json(updateEntry)
+  } catch (error) {
+    res.status(400).json({ error: error.message })
+  }
+}
+
 async function destroy(req, res) {
   try {
     const chosen_id = parseInt(req.params.id)
@@ -45,4 +57,5 @@ module.exports = {
   create,
   getIndexID,
   destroy,
+  update,
 }

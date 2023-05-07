@@ -36,6 +36,18 @@ class Post {
     // return response
   }
 
+  async update(data) {
+    const { title, entry_date, content } = data
+    const response = await db.query(
+      'UPDATE post SET title = $2, entry_date = $3, content = $4 WHERE post_id = $1 RETURNING *;',
+      [this.id, title, entry_date, content]
+    )
+    if (response.rows.length !== 1) {
+      throw new Error('Diary entry does not exist')
+    }
+    return new Post(response.rows[0])
+  }
+
   async destroy() {
     const response = await db.query(
       'DELETE FROM post WHERE post_id = $1 RETURNING *;',
