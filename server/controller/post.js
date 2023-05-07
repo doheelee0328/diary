@@ -36,7 +36,7 @@ async function destroy(req, res) {
     await entry.destroy()
     res.status(204).json()
   } catch (error) {
-    res.status(400).json(error)
+    res.status(400).json({ error: error.message })
   }
 }
 
