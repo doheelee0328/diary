@@ -6,10 +6,10 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.use("/entries", postRouter)
+app.use('/entries', postRouter)
 
 app.get('/', (req, res) => {
-  res.json('Welcome to the Diary API :)')
+  res.status(200).json('Welcome to the Diary API :)')
 })
 
 module.exports = app
