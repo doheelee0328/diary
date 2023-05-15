@@ -12,8 +12,8 @@ async function index(req, res) {
 async function create(req, res) {
   try {
     const data = req.body
-    await Post.create(data)
-    res.status(201).send('Entry Added')
+    const addData = await Post.create(data)
+    res.status(201).json('entry added')
   } catch (error) {
     res.status(400).json({ error: error.message })
   }
@@ -23,7 +23,7 @@ async function getIndexID(req, res) {
   try {
     const chosen_id = parseInt(req.params.id)
     const entry = await Post.getById(chosen_id)
-    return res.json(entry)
+    res.status(200).json(entry)
   } catch (error) {
     res.status(400).json({ error: error.message })
   }
