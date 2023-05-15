@@ -90,6 +90,7 @@ describe('Test the api for diary endpoints', () => {
 
     expect(response.body).toBe('entry added')
     // set of properties that match
+    //
   })
 
   // error
