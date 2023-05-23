@@ -1,6 +1,6 @@
-# Hackathon Diary
+# Diary
 
-Welcome to Hackathon Diary!
+Welcome to Diary! Feel free to read, post and delete your entries!
 
 ## Installation
 
