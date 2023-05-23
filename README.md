@@ -31,6 +31,7 @@ Welcome to Diary! Feel free to Read, Post and Delete your entries!
 
 - Postresql
 - node.js
+- express.js
 
 
 
