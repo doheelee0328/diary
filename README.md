@@ -1,6 +1,6 @@
 # Diary
 
-Welcome to Diary! Feel free to Read, Post and Delete your entries!
+Welcome to Diary! Feel free to Read, Post and Delete your entries!!
 
 ## Installation
 
