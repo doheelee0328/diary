@@ -20,6 +20,8 @@
 - View and create entries 
 - Delete existing entries.
 
+### Note!! It will take a few minutes for it to work! 
+
 
 ## Technology
 
